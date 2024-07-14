@@ -1,5 +1,6 @@
 package com.example.inventoryservice.controller;
 
+import com.example.inventoryservice.dto.InventoryResponse;
 import com.example.inventoryservice.service.InventoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +15,9 @@ import java.util.List;
 @RequiredArgsConstructor(onConstructor_ = {@Autowired})
 public class InventoryController {
     private final InventoryService inventoryService;
-    @GetMapping("/{sku-code}")
+    @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public boolean isInStock(@RequestParam List<String> skuCodes) {
-        return inventoryService.IsInStock(skuCodes);
+    public List<InventoryResponse> isInStock(@RequestParam List<String> skuCodes) {
+        return inventoryService.isInStock(skuCodes);
     }
 }
