@@ -30,6 +30,7 @@ public class OrderService {
                 .map(this::mapToDto)
                 .toList();
         order.setOrderItems(orderItems);
+
         List<String> skuCodes =  order.getOrderItems().stream()
                 .map(OrderItem::getSkuCode)
                 .toList();
