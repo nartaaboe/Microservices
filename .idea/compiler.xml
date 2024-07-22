@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="DiscoveryServer" />
+        <module name="NotificationService" />
         <module name="OrderService" />
         <module name="ProductService" />
         <module name="ApiGateway" />
@@ -23,6 +24,7 @@
       <module name="ApiGateway" options="-parameters" />
       <module name="DiscoveryServer" options="-parameters" />
       <module name="InventoryService" options="-parameters" />
+      <module name="NotificationService" options="-parameters" />
       <module name="OrderService" options="-parameters" />
       <module name="ProductService" options="-parameters" />
     </option>
